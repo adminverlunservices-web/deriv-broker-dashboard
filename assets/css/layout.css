@@ -1,2 +1,12 @@
-/* Layout Engine */
-.app{display:grid;grid-template-columns:260px 1fr;grid-template-rows:70px calc(100vh - 70px);grid-template-areas:'sidebar navbar' 'sidebar content';min-height:100vh;background:var(--bg);} .sidebar{grid-area:sidebar;background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column;transition:var(--transition);} .navbar{grid-area:navbar;background:var(--navbar);display:flex;justify-content:space-between;align-items:center;padding:0 24px;border-bottom:1px solid var(--border);} .main{grid-area:content;overflow:auto;padding:30px;} .dashboard{display:grid;gap:20px;grid-template-columns:repeat(12,1fr);} .col-12{grid-column:span 12}.col-8{grid-column:span 8}.col-6{grid-column:span 6}.col-4{grid-column:span 4}.col-3{grid-column:span 3}.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm);transition:var(--transition)} .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)} @media(max-width:900px){.app{grid-template-columns:1fr;grid-template-areas:'navbar' 'content';}.sidebar{position:fixed;left:-280px;top:0;height:100vh;width:260px}.sidebar.show{left:0}.search{display:none}}
+/*
+Layout Engine
+*/
+.app{display:grid;grid-template-columns:260px 1fr;grid-template-rows:70px calc(100vh - 70px);grid-template-areas:"sidebar navbar" "sidebar content";min-height:100vh;background:var(--bg)}
+.sidebar{grid-area:sidebar;background:var(--sidebar);border-right:1px solid var(--border);display:flex;flex-direction:column}
+.navbar{grid-area:navbar;background:var(--navbar);display:flex;justify-content:space-between;align-items:center;padding:0 24px;border-bottom:1px solid var(--border)}
+.main{grid-area:content;overflow:auto;padding:30px}
+.dashboard{display:grid;gap:20px;grid-template-columns:repeat(12,1fr)}
+.col-12{grid-column:span 12}.col-8{grid-column:span 8}.col-6{grid-column:span 6}.col-4{grid-column:span 4}.col-3{grid-column:span 3}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm);transition:var(--transition)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+@media(max-width:900px){.app{grid-template-columns:1fr;grid-template-areas:"navbar" "content"}.sidebar{position:fixed;left:-280px;top:0;width:260px;height:100vh}.sidebar.show{left:0}}
